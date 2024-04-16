@@ -3,27 +3,59 @@ import { createHtmlElement } from "./functions";
 import { callPage } from "./functions";
 import icon_menu from "../assets/icon_menu.svg"
 import icon_logo from "../assets/icon_logo.svg"
+import icon_esc from "../assets/icon_esc.svg"
+import icon_fb from "../assets/icon_fb.svg"
+import icon_igrm from "../assets/icon_igrm.svg"
 
 export default class Header {
     static render () {
-        const div = createHtmlElement('div', 'header-div', null, null, null, content);
-        const icnLogo = createHtmlElement('img', 'icon-logo', null, null, null, div);
+        const div = createHtmlElement('div', 'header-div', null, null, content);
+
+        const icnLogo = createHtmlElement('img', 'icon-logo', ['icon'], null, div);
             icnLogo.src = icon_logo;
-        const icnMenu = createHtmlElement('img', 'icon-menu', null, null, null, div);
+        
+        const icnText = createHtmlElement('text', 'icon-text', ['icontext'], 'Your Company', div);
+        
+        const icnMenu = createHtmlElement('img', 'icon-menu', ['icon'], null, div);
             icnMenu.src = icon_menu;
-        const listMenu = createHtmlElement('ul', 'header-ul', null, null, null, content);
-            listMenu.style.display = 'none';
-        const listMenuContent = ['Page1','Page2','Page3','Page4','Page5'];
+
+        //Menu
+        const divMenu = createHtmlElement('div', 'menu-div', null, null, content);
+
+
+        const icnEsc = createHtmlElement('img', 'icon-esc', ['icon'], null, divMenu);
+            icnEsc.src = icon_esc;
+
+        const listMenu = createHtmlElement('ul', 'menu-ul', null, null, divMenu);
+
+        const listMenuContent = ['Home','About','Services','Contact'];
             listMenuContent.forEach((page) => {
-                const el = createHtmlElement('li', null, [`${page}`], null, `${page}`, listMenu);
+                const el = createHtmlElement('li', null, [`${page}`], `${page}`, listMenu);
                 el.addEventListener('click', () => {
                     callPage(el.classList[0]);
-                    listMenu.style.display = 'none';
+                    divMenu.style.width = '';
+                    //document.body.style.backgroundColor = "white";
                     });
                 });
 
+        const icnFb = createHtmlElement('img', 'icon-fb', ['icon'], null, divMenu);
+            icnFb.src = icon_fb;
+        const icnIgrm = createHtmlElement('img', 'icon-igrm', ['icon'], null, divMenu);
+            icnIgrm.src = icon_igrm;
+            
+        icnEsc.addEventListener('click', () => {
+            divMenu.style.width = '';
+            //document.body.style.backgroundColor = "white";
+        });
+
         icnMenu.addEventListener('click', () => {
-            if(listMenu.style.display === 'none') {listMenu.style.display ='block'} else {listMenu.style.display = 'none'};
+            if(divMenu.style.width === '') {
+                divMenu.style.width ='40%'
+                //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            } else {
+                div.style.width = '';
+                //document.body.style.backgroundColor = "white";
+            };
         });
     }
 }

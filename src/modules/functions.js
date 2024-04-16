@@ -1,14 +1,14 @@
 import { content } from "..";
 import About from "./about";
 import Home from "./home";
+import Bottom from "./bottom";
 
 let currentPage = '';
 
-export function createHtmlElement(type, id, arrayClasses, inType, content, appendCh) {
+export function createHtmlElement(type, id, arrayClasses, content, appendCh) {
     const element = document.createElement(type);
     if (id) element.id = id;
     if (arrayClasses) arrayClasses.forEach(myClass => element.classList.add(myClass));
-    if (inType) element.type = inType;
     if (content) element.innerText = content;
     if (appendCh) appendCh.appendChild(element);
 
@@ -22,17 +22,14 @@ export function callPage(name) {
         };
 
         switch(name){
-            case 'Page1':
+            case 'Home':
                 Home.render();
                 break;
-            case 'Page2':
+            case 'About':
                 About.render();
                 break;
         }
         currentPage = name;
+        Bottom.render();
     }
-}
-
-export function clearAll() {
-
 }

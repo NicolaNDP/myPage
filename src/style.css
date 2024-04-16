@@ -1,0 +1,275 @@
+:root {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  
+    --myPalette1: #aac2d4;
+    --myPalette2: #7fa9b8;
+    --myPalette3: #668da7;
+  }
+
+body {
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    height: fit-content;
+
+    justify-content: center;
+    cursor: default;
+}
+
+.section-div-two, .section-div-three {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 4rem;
+}
+
+.section-div-four {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 4rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+
+/* div {
+    border: solid 0.1rem greenyellow;
+} */
+
+/* //==//==//==//== HEADER ==/==/==/==/ */
+
+#header-div {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+/* //==//==//==//== BOTTOM ==/==/==/==/ */
+
+#bottom-div {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* //==//==//==//== MENU ==/==/==/==/ */
+
+#menu-div {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    max-width: 280px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; /* Place content 60px from the top */
+    transition: 0.5s;
+    margin: 0;
+}
+
+#menu-ul {
+    list-style: none;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    padding-left: 1rem;
+
+    /* margin-right: 2rem; */
+    width: 80%;
+}
+
+#menu-ul > li {
+    margin-bottom: 0.5rem;
+    border-bottom: solid whitesmoke 0.1rem;
+}
+
+#icon-esc {
+    margin-left: 80%;
+}
+
+#menu-ul, #icon-fb {
+    padding-left: 1rem;
+}
+
+
+
+/* //==//==//==//== HOME ==/==/==/==/ */
+
+#home-div {
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* HERO */
+#hero-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 50%;
+    width: 100%;
+
+    margin-bottom: 4rem;
+}
+
+#hero-img {
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#herotext-div {
+    position: absolute;
+    margin-left: 50%;
+    width: 35%;
+    text-align: right;
+}
+
+#hero-btn {
+    cursor: pointer;
+    background-color: #aac2d4;
+    border: solid 0.1rem #668da7;
+    border-radius: 0.2rem;
+}
+
+#hero-btn:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* IT SECTION */
+#home-it-img, #about-it-img, #about-ti-img {
+    height: fit-content;
+    width: 40%;
+}
+
+#home-ittext-div, #about-ittext-div, #about-ti-div{
+    width: 40%;
+    text-align: center;
+}
+
+
+/* TTT SECTION */
+#home-ttt-div {
+    min-height: fit-content;
+}
+
+#home-ttt-div > div {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 30%;
+}
+
+/* ITTI SECTION */
+#home-itti-div > div {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    height: fit-content;
+    width: 100%;
+}
+
+#home-itti-up-img, #home-itti-dw-img {
+    height: fit-content;
+    width: 50%;
+}
+
+#home-itti-up-text, #home-itti-dw-text{
+    width: 50%;
+    text-align: center;
+}
+
+/* CTA SECTION */
+#home-cta-div, #about-cta-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 200px;
+    width: 100%;
+
+    margin-bottom: 1rem;
+}
+
+#home-cta-img, #about-cta-img, #about-subts-img {
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    filter: blur(3px);
+}
+
+#home-cta-text, #about-cta-text {
+    position: absolute;
+    margin-left: 33%;
+    width: 33%;
+    text-align: center;
+}
+
+/* ABOUT SUBTS SECTION */
+
+#about-subts-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 140px;
+    width: 100%;
+
+    margin-bottom: 4rem;
+}
+
+#about-subts-text {
+    position: absolute;
+    margin-left: 15%;
+    width: 70%;
+    text-align: center;
+}
