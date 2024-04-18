@@ -30,7 +30,7 @@ export default class Header {
 
         const listMenuContent = ['Home','About','Contact'];
             listMenuContent.forEach((page) => {
-                const el = createHtmlElement('li', null, [`${page}`], `${page}`, listMenu);
+                const el = createHtmlElement('li', null, [`${page}`, 'hover'], `${page}`, listMenu);
                 el.addEventListener('click', () => {
                     callPage(el.classList[0]);
                     divMenu.style.width = '';
