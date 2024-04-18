@@ -193,7 +193,7 @@ body {
 
 /* IT SECTION */
 #home-it-img, #about-it-img, #about-ti-img {
-    height: fit-content;
+    height: auto;
     width: 40%;
 }
 
@@ -226,7 +226,7 @@ body {
 }
 
 #home-itti-up-img, #home-itti-dw-img {
-    height: fit-content;
+    height: auto;
     width: 50%;
 }
 
