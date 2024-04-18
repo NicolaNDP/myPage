@@ -57,6 +57,10 @@ body {
     cursor: pointer;
 }
 
+.columnedup {
+    columns: 300px;
+}
+
 
 /* div {
     border: solid 0.1rem greenyellow;
@@ -100,7 +104,7 @@ body {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: white;
 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px; /* Place content 60px from the top */
@@ -150,7 +154,9 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    height: 50%;
+    object-fit: cover;
+
+    height: auto;
     width: 100%;
 
     margin-bottom: 4rem;
@@ -187,7 +193,7 @@ body {
     width: 40%;
 }
 
-#home-ittext-div, #about-ittext-div, #about-ti-div{
+#home-ittext-div, #about-ittext-div, #about-titext-div{
     width: 40%;
     text-align: center;
 }
@@ -237,7 +243,7 @@ body {
     margin-bottom: 1rem;
 }
 
-#home-cta-img, #about-cta-img, #about-subts-img {
+#home-cta-img, #about-cta-img, #about-subts-img, #contact-subts-img {
     height: 100%;
     object-fit: cover;
     position: relative;
@@ -256,7 +262,7 @@ body {
 
 /* ABOUT SUBTS SECTION */
 
-#about-subts-div {
+#about-subts-div, #contact-subts-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,9 +273,16 @@ body {
     margin-bottom: 4rem;
 }
 
-#about-subts-text {
+#about-subts-text, #contact-subts-text {
     position: absolute;
     margin-left: 15%;
     width: 70%;
     text-align: center;
+}
+
+/* CONTACT SECTION */
+
+#contact-caddress-map {
+    height: auto;
+    width: 40%;
 }

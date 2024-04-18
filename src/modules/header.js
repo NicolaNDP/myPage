@@ -28,7 +28,7 @@ export default class Header {
 
         const listMenu = createHtmlElement('ul', 'menu-ul', null, null, divMenu);
 
-        const listMenuContent = ['Home','About','Services','Contact'];
+        const listMenuContent = ['Home','About','Contact'];
             listMenuContent.forEach((page) => {
                 const el = createHtmlElement('li', null, [`${page}`], `${page}`, listMenu);
                 el.addEventListener('click', () => {

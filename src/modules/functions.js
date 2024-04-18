@@ -1,6 +1,7 @@
 import { content } from "..";
-import About from "./about";
 import Home from "./home";
+import About from "./about";
+import Contact from "./contact";
 import Bottom from "./bottom";
 
 let currentPage = '';
@@ -27,6 +28,9 @@ export function callPage(name) {
                 break;
             case 'About':
                 About.render();
+                break;
+            case 'Contact':
+                Contact.render();
                 break;
         }
         currentPage = name;
